@@ -8,7 +8,11 @@ import {IBasketService,IBasketItemCollection} from "../../../../shared/services/
 import {IBasketEventService} from "../../../../shared/services/basket/basket-event.service";
 
 export interface IThreeDHubsBasketUploaderComponentController {
-
+    /**
+     * The basket was changed event handler
+     * @param basketItems
+     */
+    onBasketWasChanged(basketItems : IBasketItemCollection);
 }
 
 class ThreeDHubsBasketUploaderComponentController implements IThreeDHubsBasketUploaderComponentController {
@@ -31,10 +35,12 @@ class ThreeDHubsBasketUploaderComponent{
     static template = `
         <div class="tdh-basket-uploader">
             <div class="tdh-basket-uploader__header">
-                Header
+                <span ng-bind="($ctrl.basketItems.length ? $ctrl.basketItems.length : 'No') + ' files uploaded'"></span>
             </div>
             <div class="tdh-basket-uploader__content">
-                Content
+                <div ng-repeat="basketItem in $ctrl.basketItems">
+                    <span ng-bind="basketItem.name"></span>
+                </div>
             </div>
             <div class="tdh-basket-uploader__footer">
                 Footer

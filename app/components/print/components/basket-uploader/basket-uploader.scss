@@ -1,5 +1,22 @@
+$tdh-basket-uploader-background-color : white;
+$tdh-basket-uploader-border-radius : 5px;
+$tdh-basket-uploader-box-shadow : 0 1px 0.35rem rgba(0,0,0,0.15);
 $tdh-basket-uploader-font-family : arial, helvetica, verdana, sans-serif;
 
+$tdh-basket-uploader-header-padding : 20px;
+$tdh-basket-uploader-header-font-size : 1.25em;
+$tdh-basket-uploader-header-border-bottom : 1px solid #e6e6e6;
+
+
 .tdh-basket-uploader{
+  background-color: $tdh-basket-uploader-background-color;
+  box-shadow: $tdh-basket-uploader-box-shadow;
+  border-radius: $tdh-basket-uploader-border-radius;
   font-family: $tdh-basket-uploader-font-family;
 }
+
+  .tdh-basket-uploader__header{
+    padding:$tdh-basket-uploader-header-padding;
+    font-size: $tdh-basket-uploader-header-font-size;
+    border-bottom:$tdh-basket-uploader-header-border-bottom;
+  }
