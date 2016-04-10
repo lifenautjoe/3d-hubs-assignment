@@ -19,7 +19,9 @@ class ThreeDHubsHomeComponentController implements IThreeDHubsHomeComponentContr
 class ThreeDHubsHomeComponent {
     static controller = ThreeDHubsHomeComponentController;
     static template = `
-        <div>Welcome threeDHubsHomeComponent</div>
+        <div class="container">
+            Welcome threeDHubsHomeComponent
+        </div>
     `;
 }
 

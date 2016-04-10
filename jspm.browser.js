@@ -26,13 +26,14 @@ SystemJS.config({
       "3d-hubs-assignment/shared/components/index.ts",
       "3d-hubs-assignment/components/home/index.ts",
       "3d-hubs-assignment/components/print/index.ts",
+      "3d-hubs-assignment/3dHubs.scss",
       "github:angular/bower-angular@1.5.3.json",
       "github:thefabulousdev/ngComponentRouter@master/angular_1_router.js",
       "github:thefabulousdev/ngComponentRouter@master.json",
       "3d-hubs-assignment/shared/services/event-dispatcher/index.ts",
       "3d-hubs-assignment/shared/components/header/index.ts",
-      "3d-hubs-assignment/components/home/home.component.ts",
       "3d-hubs-assignment/components/print/print.component.ts",
+      "github:mobilexag/plugin-sass@0.4.0.json",
       "3d-hubs-assignment/shared/services/event-dispatcher/event-dispatcher.service.ts",
       "3d-hubs-assignment/shared/components/header/components/index.ts",
       "3d-hubs-assignment/shared/components/header/header.component.ts",
@@ -41,11 +42,10 @@ SystemJS.config({
       "3d-hubs-assignment/shared/components/header/header.scss",
       "3d-hubs-assignment/shared/services/event-dispatcher/lib/EventCollection.ts",
       "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.component.ts",
-      "github:mobilexag/plugin-sass@0.4.0.json",
       "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.scss",
       "npm:bluebird@3.3.4.json",
       "npm:bluebird@3.3.4/js/browser/bluebird.js",
-      "3d-hubs-assignment/3dHubs.scss"
+      "3d-hubs-assignment/components/home/home.component.ts"
     ]
   }
 });
