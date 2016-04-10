@@ -7,12 +7,12 @@ export interface IGenericCollection<T> {
      * Removes the given value from the collection
      * @param value
      */
-    remove(value : T ) : void;
+    remove(value:T) : void;
     /**
      * Adds the given value to the collection
      * @param value
      */
-    add(value : T) : void;
+    add(value:T) : void;
     /**
      * Clears the collection
      */
@@ -25,30 +25,44 @@ export interface IGenericCollection<T> {
      * Sets the collection items
      * @param values
      */
-    set(values : Array<T>) : void;
+    set(values:Array<T>) : void;
+    /**
+     * Returns the number of items within the collection
+     */
+    count() : number;
 }
 
-export class GenericCollection<T> implements IGenericCollection<T>{
-    protected values : Array<T>;
-    constructor(items?){
+export class GenericCollection<T> implements IGenericCollection<T> {
+    protected values:Array<T>;
+
+    constructor(items?) {
         this.values = items ? items : [];
     }
-    remove(value : T){
+
+    remove(value:T) {
         let items = this.get();
         this.set(items.filter(function (storedValue) {
             return value !== storedValue;
         }));
     }
-    add(value : T){
+
+    add(value:T) {
         this.values.push(value);
     }
-    clear(){
+
+    clear() {
         this.set([]);
     }
-    get(){
+
+    get() {
         return this.values;
     }
-    set(values : Array<T>){
+
+    set(values:Array<T>) {
         this.values = values;
+    }
+
+    count(){
+        return this.values.length;
     }
 }
