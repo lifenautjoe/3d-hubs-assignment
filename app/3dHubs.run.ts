@@ -5,11 +5,13 @@
 import angular = require('angular');
 import Promise = require('bluebird');
 
-class ThreeDHubsRun{
+class ThreeDHubsRun {
     static $inject = [
-      '$log'
+        '$log',
+        '$rootScope'
     ];
-    constructor($log : angular.ILogService, $rootScope : angular.IRootScopeService){
+
+    constructor($log:angular.ILogService, $rootScope:angular.IRootScopeService) {
         Promise.setScheduler(function (cb) {
             $rootScope.$evalAsync(cb);
         });
