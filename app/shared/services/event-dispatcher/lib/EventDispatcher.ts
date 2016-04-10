@@ -4,10 +4,12 @@
 
 import {
     EventCollection,
+    EventCollectionEventsListenersStorage,
     IEventCollection,
     IEventCollectionListener,
     IEventCollectionListenerRemover } from './EventCollection';
 
+export { EventCollectionEventsListenersStorage } from './EventCollection';
 
 export interface IEventDispatcher {
     listen(eventName : string, ...listeners : IEventCollectionListener[]) : IEventCollectionListenerRemover;
@@ -17,8 +19,8 @@ export interface IEventDispatcher {
 export class EventDispatcher implements IEventDispatcher {
     protected eventsCollection:EventCollection;
 
-    constructor(events) {
-        this.eventsCollection = this.makeEventCollection(events);
+    constructor(eventsListenersStorage? : EventCollectionEventsListenersStorage) {
+        this.eventsCollection = this.makeEventCollection(eventsListenersStorage);
     }
 
     listen(eventName:string, ...listeners:IEventCollectionListener[]):IEventCollectionListenerRemover {
@@ -29,7 +31,7 @@ export class EventDispatcher implements IEventDispatcher {
         return this.eventsCollection.trigger(eventName,...args);
     }
 
-    protected makeEventCollection(events):EventCollection {
-        return new EventCollection(events);
+    protected makeEventCollection(eventsListenersStorage? : EventCollectionEventsListenersStorage):EventCollection {
+        return new EventCollection(eventsListenersStorage);
     }
 }

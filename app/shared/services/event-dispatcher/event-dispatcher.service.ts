@@ -4,16 +4,19 @@
 
 import angular = require('angular');
 
-import { EventDispatcher, IEventDispatcher } from './lib/EventDispatcher';
+import {
+    EventDispatcher,
+    EventCollectionEventsListenersStorage,
+    IEventDispatcher } from './lib/EventDispatcher';
 export { IEventDispatcher } from './lib/EventDispatcher';
 
 export interface IEventDispatcherService {
-    make(events) : IEventDispatcher;
+    make(eventsListenersStorage) : IEventDispatcher;
 }
 
 class EventDispatcherService implements IEventDispatcherService {
-    make(events){
-        return new EventDispatcher(events);
+    make(eventsListenersStorage : EventCollectionEventsListenersStorage){
+        return new EventDispatcher(eventsListenersStorage);
     }
 }
 

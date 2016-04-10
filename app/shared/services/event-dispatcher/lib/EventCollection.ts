@@ -38,14 +38,14 @@ interface EventCollectionListenerRemover extends IEventCollectionListenerRemover
 interface EventCollectionListenerRemoversExecutor extends IEventCollectionListenerRemoversExecutor {
 }
 
-interface EventCollectionEventsListenersStorage {
+export interface EventCollectionEventsListenersStorage {
     [ eventName : string]  : Array<EventCollectionListener>
 }
 
 export class EventCollection implements IEventCollection<EventCollectionEventsListenersStorage,EventCollectionListener> {
     protected eventsListenersStorage;
 
-    constructor(eventsListenersStorage:EventCollectionEventsListenersStorage) {
+    constructor(eventsListenersStorage?:EventCollectionEventsListenersStorage) {
         this.eventsListenersStorage = eventsListenersStorage ? eventsListenersStorage : {};
     }
 
