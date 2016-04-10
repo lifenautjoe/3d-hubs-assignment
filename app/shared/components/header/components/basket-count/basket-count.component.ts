@@ -16,9 +16,6 @@ class ThreeDHubsBasketCountComponentBasketCount implements IThreeDHubsBasketCoun
     constructor($log : angular.ILogService){
         $log.debug('Hello from basketCount component controller');
     }
-    $onInit() {
-        console.log('Initing')
-    }
 }
 
 class ThreeDHubsBasketCountComponent {
