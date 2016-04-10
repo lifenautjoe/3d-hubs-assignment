@@ -32,15 +32,18 @@ class ThreeDHubsHeaderComponent {
                         <img src="https://d2xsqsnb4fq1ex.cloudfront.net/sites/all/themes/hubs3d/logo.png">
                     </div>
                     <div class="tdh-header-menu__items">
-                        <ul>
-                            <li>
-                                <a ng-link="['Home']">Home</a>
+                        <ul class="tdh-header-menu-items">
+                            <li class="tdh-header-menu-items__item">
+                                <a class="tdh-header-menu-items-item" ng-link="['Home']">
+                                    <span>home</span>
+                                </a>
                             </li>
-                            <li>
-                                <a ng-link="['Print']">Cart</a>
+                            <li class="tdh-header-menu-items__item">
+                                <a class="tdh-header-menu-items-item" ng-link="['Print']">
+                                    <span>print</span>
+                                </a>
                             </li>
                         </ul>
-                        Items
                     </div>
                 </div>
             </div>
