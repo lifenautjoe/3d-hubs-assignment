@@ -1,6 +1,6 @@
 /// <reference path="../typings/main.d.ts" />
 
-import 'yui3-contextual-reset/cssreset-context.css!';
+import 'bootstrap-grid-only/css/grid12.css!';
 
 import './3dHubs.module.ts';
 
