@@ -11,13 +11,16 @@ import {
 export { IEventDispatcher } from './lib/EventDispatcher';
 
 export interface IEventDispatcherService {
+    /**
+     * Event dispatcher factory method
+     * @param eventsListenersStorage
+     */
     make(eventsListenersStorage) : IEventDispatcher;
 }
 
 class EventDispatcherService implements IEventDispatcherService {
-    make(eventsListenersStorage : EventCollectionEventsListenersStorage){
+    make(eventsListenersStorage:EventCollectionEventsListenersStorage) {
         return new EventDispatcher(eventsListenersStorage);
     }
 }
-
-angular.module('3dHubsAssignment').service('eventDispatcherService',EventDispatcherService);
+angular.module('3dHubsAssignment').service('eventDispatcherService', EventDispatcherService);

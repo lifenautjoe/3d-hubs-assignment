@@ -12,7 +12,17 @@ import {
 export { EventCollectionEventsListenersStorage } from './EventCollection';
 
 export interface IEventDispatcher {
+    /**
+     * Listens to the event with the given name
+     * @param eventName
+     * @param listeners
+     */
     listen(eventName : string, ...listeners : IEventCollectionListener[]) : IEventCollectionListenerRemover;
+    /**
+     * Broadcasts the event with the given name and arguments
+     * @param eventName
+     * @param args
+     */
     broadcast(eventName : string, ...args : any[]) : void;
 }
 
@@ -31,6 +41,11 @@ export class EventDispatcher implements IEventDispatcher {
         return this.eventsCollection.trigger(eventName,...args);
     }
 
+    /**
+     * Event collection factory method
+     * @param eventsListenersStorage
+     * @returns {EventCollection}
+     */
     protected makeEventCollection(eventsListenersStorage? : EventCollectionEventsListenersStorage):EventCollection {
         return new EventCollection(eventsListenersStorage);
     }
