@@ -4,3 +4,4 @@
 
 import './generic-collection/index.ts';
 import './event-dispatcher/index.ts';
+import './basket/index.ts';
