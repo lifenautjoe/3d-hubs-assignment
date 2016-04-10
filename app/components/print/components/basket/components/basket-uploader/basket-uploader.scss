@@ -1,0 +1,33 @@
+
+$tdh-basket-font-family : arial, helvetica, verdana, sans-serif;
+
+$tdh-basket-uploader-padding : 40px 30px;
+$tdh-basket-uploader-font-size : 1.25em;
+$tdh-basket-uploader-text-color : #495a56;
+$tdh-basket-uploader-text-icon-height : 30px;
+$tdh-basket-uploader-text-icon-width : 65px;
+
+
+
+
+.tdh-basket-uploader{
+  font-family: $tdh-basket-font-family;
+  font-size:$tdh-basket-uploader-font-size;
+  height : 100%;
+  text-align: center;
+}
+
+  .tdh-basket-uploader__text {
+    color : $tdh-basket-uploader-text-color;
+    padding: $tdh-basket-uploader-padding;
+    display: block;
+    &:before {
+      background: url("https://d2xsqsnb4fq1ex.cloudfront.net/sites/all/themes/hubs3d/images/icon/upload-icon.png") no-repeat center;
+      background-size: contain;
+      content: '';
+      display: inline-block;
+      height: $tdh-basket-uploader-text-icon-height;
+      vertical-align: bottom;
+      width: $tdh-basket-uploader-text-icon-width;
+    }
+  }

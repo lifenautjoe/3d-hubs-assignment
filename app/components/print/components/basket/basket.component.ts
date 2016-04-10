@@ -4,15 +4,20 @@
 
 import angular = require('angular');
 import './basket.scss';
-import {IBasketService,IBasketItemCollection} from "../../../../shared/services/basket/basket.service";
+import {IBasketService,IBasketItemCollection,IBasketItem} from "../../../../shared/services/basket/basket.service";
 import {IBasketEventService} from "../../../../shared/services/basket/basket-event.service";
 
 export interface IThreeDHubsBasketComponentController {
     /**
-     * The basket was changed event handler
+     * The basketEventService#wasChanged event handler
      * @param basketItems
      */
-    onBasketWasChanged(basketItems : IBasketItemCollection);
+    onBasketWasChanged(basketItems:IBasketItemCollection);
+    /**
+     * The basket-uploader component upload success handler
+     * @param basketItem
+     */
+    onBasketUploaderSuccess(basketItem:IBasketItem);
 }
 
 class ThreeDHubsBasketComponentController implements IThreeDHubsBasketComponentController {
@@ -20,17 +25,22 @@ class ThreeDHubsBasketComponentController implements IThreeDHubsBasketComponentC
         'basketService',
         'basketEventService'
     ];
-    protected basketItems : IBasketItemCollection;
-    constructor(basketService : IBasketService,basketEventService : IBasketEventService){
+    protected basketItems:IBasketItemCollection;
+    constructor(protected basketService:IBasketService, basketEventService:IBasketEventService) {
         this.basketItems = basketService.getItems();
         basketEventService.listenWasChanged(this.onBasketWasChanged);
     }
-    onBasketWasChanged(basketItems : IBasketItemCollection) {
+
+    onBasketWasChanged(basketItems:IBasketItemCollection) {
         this.basketItems = basketItems;
+    }
+
+    onBasketUploaderSuccess(basketItem:IBasketItem) {
+        this.basketService.addItem(basketItem);
     }
 }
 
-class ThreeDHubsBasketComponent{
+class ThreeDHubsBasketComponent {
     static controller = ThreeDHubsBasketComponentController;
     static template = `
         <div class="tdh-basket">
@@ -43,10 +53,10 @@ class ThreeDHubsBasketComponent{
                 </div>
             </div>
             <div class="tdh-basket__footer">
-                Footer
+                <three-d-hubs-basket-uploader on-upload-success="$ctrl.onBasketUploaderSuccess"></three-d-hubs-basket-uploader>
             </div>
         </div>
     `;
 }
 
-angular.module('3dHubsAssignment').component('threeDHubsBasket',ThreeDHubsBasketComponent);
+angular.module('3dHubsAssignment').component('threeDHubsBasket', ThreeDHubsBasketComponent);
