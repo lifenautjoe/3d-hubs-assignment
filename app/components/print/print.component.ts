@@ -3,7 +3,6 @@
  */
 
 import angular = require('angular');
-import { IEventDispatcherService } from './../../shared/services/event-dispatcher/event-dispatcher.service';
 
 export interface IThreeDHubsPrintComponentController {
     
@@ -11,12 +10,9 @@ export interface IThreeDHubsPrintComponentController {
 
 class ThreeDHubsPrintComponentController implements IThreeDHubsPrintComponentController {
     static $inject = [
-        '$log',
-        'eventDispatcherService'
+        '$log'
     ];
-    constructor($log : angular.ILogService,eventDispatcher : IEventDispatcherService){
-        $log.debug('Hello from home component controller');
-        console.log(eventDispatcher.make({}));
+    constructor($log : angular.ILogService){
     }
 }
 

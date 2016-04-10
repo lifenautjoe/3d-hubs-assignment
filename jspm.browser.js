@@ -33,14 +33,14 @@ SystemJS.config({
       "3d-hubs-assignment/shared/services/event-dispatcher/index.ts",
       "3d-hubs-assignment/shared/components/header/index.ts",
       "3d-hubs-assignment/components/home/home.component.ts",
-      "3d-hubs-assignment/components/print/print.component.ts",
       "github:mobilexag/plugin-sass@0.4.0.json",
       "3d-hubs-assignment/shared/services/event-dispatcher/event-dispatcher.service.ts",
+      "3d-hubs-assignment/shared/components/header/header.component.ts",
       "3d-hubs-assignment/shared/services/event-dispatcher/lib/EventDispatcher.ts",
       "3d-hubs-assignment/shared/services/event-dispatcher/lib/EventCollection.ts",
       "npm:bluebird@3.3.4.json",
       "npm:bluebird@3.3.4/js/browser/bluebird.js",
-      "3d-hubs-assignment/shared/components/header/header.component.ts"
+      "3d-hubs-assignment/components/print/print.component.ts"
     ]
   }
 });
