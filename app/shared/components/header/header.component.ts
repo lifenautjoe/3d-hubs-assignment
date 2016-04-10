@@ -23,8 +23,8 @@ class ThreeDHubsHeaderComponent {
     static template = `
     <div class="tdh-header">
         <div class="container tdh-header__container">
-            <div class="tdh-header__print">
-                Print
+            <div class="tdh-header__basket-button">
+                <three-d-hubs-basket-count></three-d-hubs-basket-count>
             </div>
             <div class="tdh-header__menu">
                 <div class="tdh-header-menu">

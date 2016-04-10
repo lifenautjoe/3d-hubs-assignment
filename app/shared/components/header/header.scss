@@ -1,4 +1,5 @@
-$tdh-header-height : 65px;
+$tdh-header-height : 70px;
+$tdh-header-basket-button-width : 200px;
 $tdh-header-background-color : white;
 $tdh-header-box-shadow : 0 1px 1px rgba(0,0,0,0.15);
 $tdh-header-font-family : arial, helvetica, verdana, sans-serif;
@@ -27,10 +28,10 @@ $tdh-header-menu-items-item-hover-color : #6d6d6d;
     height : 100%;
   }
 
-    .tdh-header__print{
+    .tdh-header__basket-button{
       height : 100%;
       float: right;
-      width:200px;
+      width:$tdh-header-basket-button-width;
     }
 
     .tdh-header__menu{
