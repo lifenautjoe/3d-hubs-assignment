@@ -28,9 +28,9 @@ class ThreeDHubsComponent{
             useAsDefault : true
         },
         {
-            path : '/cart',
-            name : 'Cart',
-            component : 'threeDHubsCart'
+            path : '/print',
+            name : 'Print',
+            component : 'threeDHubsPrint'
         }
     ];
     static template = `

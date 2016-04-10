@@ -5,6 +5,7 @@
 import angular = require('angular');
 
 import { EventDispatcher, IEventDispatcher } from './lib/EventDispatcher';
+export { IEventDispatcher } from './lib/EventDispatcher';
 
 export interface IEventDispatcherService {
     make(events) : IEventDispatcher;
