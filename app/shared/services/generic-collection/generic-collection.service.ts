@@ -4,9 +4,9 @@
 
 import angular = require('angular');
 import {IGenericCollection, GenericCollection} from "./lib/GenericCollection";
-
+export { IGenericCollection } from './lib/GenericCollection';
 export interface IGenericCollectionService<T> {
-    make(values : Array<T>) : IGenericCollection<T>
+    make(values? : Array<T>) : IGenericCollection<T>
 }
 
 class GenericCollectionService<T> implements  IGenericCollectionService<T> {

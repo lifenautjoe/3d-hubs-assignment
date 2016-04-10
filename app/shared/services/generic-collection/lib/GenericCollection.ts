@@ -30,6 +30,11 @@ export interface IGenericCollection<T> {
      * Returns the number of items within the collection
      */
     count() : number;
+
+    /**
+     * Checks whether a value is within the collection
+     */
+    has(value : T ) : boolean;
 }
 
 export class GenericCollection<T> implements IGenericCollection<T> {
@@ -64,5 +69,9 @@ export class GenericCollection<T> implements IGenericCollection<T> {
 
     count(){
         return this.values.length;
+    }
+
+    has(value : T){
+        return this.values.indexOf(value) > -1;
     }
 }
