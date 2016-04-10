@@ -19,7 +19,9 @@ class ThreeDHubsPrintComponentController implements IThreeDHubsPrintComponentCon
 class ThreeDHubsPrintComponent{
     static controller = ThreeDHubsPrintComponentController;
     static template = `
-        <div>Welcome threeDHubsPrintComponent</div>
+        <div class="container">
+            Welcome threeDHubsPrintComponent
+        </div>
     `;
 }
 
