@@ -1,0 +1,22 @@
+
+$tdh-print-font-family : arial, helvetica, verdana, sans-serif;
+
+$tdh-print-step-text-color : #495a56;
+$tdh-print-step-text-font-size : 1.75rem;
+$tdh-print-step-text-font-weight : 600;
+$tdh-print-step-text-font-weight : 600;
+$tdh-print-step-text-margin : 20px 0;
+
+
+
+.tdh-print{
+  font-family: $tdh-print-font-family;
+}
+
+  .tdh-print__step-text {
+    margin : $tdh-print-step-text-margin;
+    font-size: $tdh-print-step-text-font-size;
+    font-weight: $tdh-print-step-text-font-weight;
+    color : $tdh-print-step-text-color;
+    display: block;
+  }

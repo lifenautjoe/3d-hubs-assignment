@@ -30,13 +30,23 @@ SystemJS.config({
       "github:angular/bower-angular@1.5.3.json",
       "github:thefabulousdev/ngComponentRouter@master/angular_1_router.js",
       "github:thefabulousdev/ngComponentRouter@master.json",
+      "3d-hubs-assignment/shared/services/generic-collection/index.ts",
       "3d-hubs-assignment/shared/services/event-dispatcher/index.ts",
+      "3d-hubs-assignment/shared/services/basket/index.ts",
       "3d-hubs-assignment/shared/components/header/index.ts",
+      "3d-hubs-assignment/components/home/home.component.ts",
+      "3d-hubs-assignment/components/print/components/index.ts",
       "3d-hubs-assignment/components/print/print.component.ts",
       "github:mobilexag/plugin-sass@0.4.0.json",
+      "3d-hubs-assignment/shared/services/generic-collection/generic-collection.service.ts",
       "3d-hubs-assignment/shared/services/event-dispatcher/event-dispatcher.service.ts",
+      "3d-hubs-assignment/shared/services/basket/basket-event.service.ts",
+      "3d-hubs-assignment/shared/services/basket/basket.service.ts",
       "3d-hubs-assignment/shared/components/header/components/index.ts",
       "3d-hubs-assignment/shared/components/header/header.component.ts",
+      "3d-hubs-assignment/components/print/components/basket-uploader/index.ts",
+      "3d-hubs-assignment/components/print/print.scss",
+      "3d-hubs-assignment/shared/services/generic-collection/lib/GenericCollection.ts",
       "3d-hubs-assignment/shared/services/event-dispatcher/lib/EventDispatcher.ts",
       "3d-hubs-assignment/shared/components/header/components/basket-count/index.ts",
       "3d-hubs-assignment/shared/components/header/header.scss",
@@ -45,7 +55,8 @@ SystemJS.config({
       "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.scss",
       "npm:bluebird@3.3.4.json",
       "npm:bluebird@3.3.4/js/browser/bluebird.js",
-      "3d-hubs-assignment/components/home/home.component.ts"
+      "3d-hubs-assignment/components/print/components/basket-uploader/basket-uploader.component.ts",
+      "3d-hubs-assignment/components/print/components/basket-uploader/basket-uploader.scss"
     ]
   }
 });
