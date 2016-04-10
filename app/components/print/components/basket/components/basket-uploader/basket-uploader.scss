@@ -1,20 +1,30 @@
 
-$tdh-basket-font-family : arial, helvetica, verdana, sans-serif;
-
+$tdh-basket-uploader-font-family : arial, helvetica, verdana, sans-serif;
 $tdh-basket-uploader-padding : 40px 30px;
 $tdh-basket-uploader-font-size : 1.25em;
+$tdh-basket-uploader-transition : 0.25s ease-out;;
+
+$tdh-basket-uploader-hover-box-shadow : inset 0 0 0.2em #58d0b8;
+
 $tdh-basket-uploader-text-color : #495a56;
 $tdh-basket-uploader-text-icon-height : 30px;
 $tdh-basket-uploader-text-icon-width : 65px;
 
 
 
-
 .tdh-basket-uploader{
-  font-family: $tdh-basket-font-family;
+  font-family: $tdh-basket-uploader-font-family;
   font-size:$tdh-basket-uploader-font-size;
   height : 100%;
+  cursor: pointer;
   text-align: center;
+  -webkit-transition: $tdh-basket-uploader-transition;
+  transition: $tdh-basket-uploader-transition;
+
+  &:hover{
+    box-shadow: $tdh-basket-uploader-hover-box-shadow;
+    outline: none;
+  }
 }
 
   .tdh-basket-uploader__text {

@@ -57,9 +57,9 @@ SystemJS.config({
       "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/index.ts",
       "3d-hubs-assignment/components/print/components/basket/basket.scss",
       "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.scss",
-      "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/basket-uploader.component.ts",
       "npm:bluebird@3.3.4.json",
       "npm:bluebird@3.3.4/js/browser/bluebird.js",
+      "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/basket-uploader.component.ts",
       "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/basket-uploader.scss"
     ]
   }

@@ -27,7 +27,7 @@ class ThreeDHubsBasketUploaderComponent implements angular.IComponentOptions{
     };
     static template = `
         <div class="tdh-basket-uploader">
-            <span class="tdh-basket-uploader__text">Drag 3D files here or browser for a file</span>
+            <span class="tdh-basket-uploader__text">Drag 3D files here or browse for a file</span>
         </div>
     `;
 }
