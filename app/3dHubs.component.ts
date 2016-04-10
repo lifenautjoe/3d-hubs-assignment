@@ -34,9 +34,11 @@ class ThreeDHubsComponent{
         }
     ];
     static template = `
-        <three-d-hubs-header></three-d-hubs-header>
         <div class="tdh">
-            <ng-outlet></ng-outlet>
+            <three-d-hubs-header></three-d-hubs-header>
+            <div class="tdh-page">
+                <ng-outlet></ng-outlet>
+            </div>
         </div>
     `;
 }
