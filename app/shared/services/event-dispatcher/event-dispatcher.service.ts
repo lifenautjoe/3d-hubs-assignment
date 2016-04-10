@@ -4,16 +4,23 @@
 
 import angular = require('angular');
 
-import { EventDispatcher, IEventDispatcher } from './lib/EventDispatcher';
+import {
+    EventDispatcher,
+    EventCollectionEventsListenersStorage,
+    IEventDispatcher } from './lib/EventDispatcher';
+export { IEventDispatcher } from './lib/EventDispatcher';
 
 export interface IEventDispatcherService {
-    make(events) : IEventDispatcher;
+    /**
+     * Event dispatcher factory method
+     * @param eventsListenersStorage
+     */
+    make(eventsListenersStorage) : IEventDispatcher;
 }
 
 class EventDispatcherService implements IEventDispatcherService {
-    make(events){
-        return new EventDispatcher(events);
+    make(eventsListenersStorage:EventCollectionEventsListenersStorage) {
+        return new EventDispatcher(eventsListenersStorage);
     }
 }
-
-angular.module('3dHubsAssignment').service('eventDispatcherService',EventDispatcherService);
+angular.module('3dHubsAssignment').service('eventDispatcherService', EventDispatcherService);

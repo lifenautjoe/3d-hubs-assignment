@@ -27,7 +27,7 @@ class ThreeDHubsHeaderComponent {
                 <a ng-link="['Home']">Home</a>
             </li>
             <li>
-                <a ng-link="['Cart']">Cart</a>
+                <a ng-link="['Print']">Cart</a>
             </li>
         </ul>
     </div>

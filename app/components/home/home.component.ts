@@ -3,7 +3,6 @@
  */
 
 import angular = require('angular');
-import { ITestService } from './../../shared/services/test/test.service.ts';
 
 export interface IThreeDHubsHomeComponentController {
     
@@ -11,12 +10,9 @@ export interface IThreeDHubsHomeComponentController {
 
 class ThreeDHubsHomeComponentController implements IThreeDHubsHomeComponentController {
     static $inject = [
-        '$log',
-        'testService'
+        '$log'
     ];
-    constructor($log : angular.ILogService,testService : ITestService){
-        $log.debug('Hello from home component controller');
-        testService.doSomething();
+    constructor($log : angular.ILogService){
     }
 }
 

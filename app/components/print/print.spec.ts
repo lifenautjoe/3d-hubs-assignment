@@ -4,10 +4,10 @@
 
 import 'angular-mocks/ngMock';
 
-import { IThreeDHubsCartComponentController } from './cart.component';
+import { IThreeDHubsPrintComponentController } from './print.component';
 
-describe('component: threeDHubsCart', function () {
-    let component : IThreeDHubsCartComponentController ,
+describe('component: threeDHubsPrint', function () {
+    let component : IThreeDHubsPrintComponentController ,
         scope : angular.IScope,
         $componentController : angular.IComponentControllerService;
 
@@ -19,7 +19,7 @@ describe('component: threeDHubsCart', function () {
     }));
 
     it('should be defined', function () {
-        component = $componentController('threeDHubsCart',{ $scope : scope});
+        component = $componentController('threeDHubsPrint',{ $scope : scope});
         expect(typeof component !== 'undefined').toBe(true);
     });
 });
