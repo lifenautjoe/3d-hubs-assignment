@@ -12,6 +12,7 @@ SystemJS.config({
       "github:frankwallis/plugin-typescript@4.0.5.json",
       "github:zirafa/bootstrap-grid-only@master/css/grid12.css!github:systemjs/plugin-css@0.1.20/css.js",
       "3d-hubs-assignment/3dHubs.module.ts",
+      "3d-hubs-assignment/3dHubs.constants.ts",
       "3d-hubs-assignment/3dHubs.values.ts",
       "3d-hubs-assignment/3dHubs.config.ts",
       "3d-hubs-assignment/3dHubs.run.ts",
@@ -51,16 +52,18 @@ SystemJS.config({
       "3d-hubs-assignment/shared/components/header/components/basket-count/index.ts",
       "3d-hubs-assignment/shared/components/header/header.scss",
       "3d-hubs-assignment/components/print/components/basket/components/index.ts",
-      "3d-hubs-assignment/components/print/components/basket/basket.component.ts",
       "3d-hubs-assignment/shared/services/event-dispatcher/lib/EventCollection.ts",
       "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.component.ts",
       "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/index.ts",
-      "3d-hubs-assignment/components/print/components/basket/basket.scss",
       "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.scss",
+      "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/services/index.ts",
+      "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/basket-uploader.component.ts",
+      "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/services/3d-file-upload.service.ts",
+      "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/basket-uploader.scss",
       "npm:bluebird@3.3.4.json",
       "npm:bluebird@3.3.4/js/browser/bluebird.js",
-      "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/basket-uploader.component.ts",
-      "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/basket-uploader.scss"
+      "3d-hubs-assignment/components/print/components/basket/basket.component.ts",
+      "3d-hubs-assignment/components/print/components/basket/basket.scss"
     ]
   }
 });

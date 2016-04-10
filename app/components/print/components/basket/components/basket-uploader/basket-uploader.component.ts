@@ -3,19 +3,34 @@
  */
 
 // TODO : Perhaps this should be moved into shared components?
+// NOTE : We don't have an actual form, however in the real world we would, I'll leave the method named as it is
+
+
 import './basket-uploader.scss';
 import angular = require('angular');
 import {IEventDispatcherService} from "../../../../../../shared/services/event-dispatcher/event-dispatcher.service";
+import {IThreeDFileUploadService} from "./services/3d-file-upload.service";
+export {IThreeDFileUploadServiceSuccessData} from './services/3d-file-upload.service';
 
 export interface IThreeDHubsBasketUploaderComponentController {
-
+    submitForm();
 }
 
 class ThreeDHubsBasketUploaderComponentController implements IThreeDHubsBasketUploaderComponentController {
     static $inject = [
+        'threeDFileUploadService'
     ];
-    constructor(){
+    protected onUploadSuccess;
+    protected onUploadFailure;
+    constructor(protected threeDFileUploadService : IThreeDFileUploadService){
 
+    }
+    submitForm(){
+        // ... do whatever must be done in order to get the 3d file
+        let threeDFile = {};
+        this.threeDFileUploadService.upload(threeDFile)
+            .then((data)=> this.onUploadSuccess ? this.onUploadSuccess({data : data}) : null)
+            .catch((err) => this.onUploadFailure ? this.onUploadFailure({err : err}) : null);
     }
 }
 
@@ -26,7 +41,7 @@ class ThreeDHubsBasketUploaderComponent implements angular.IComponentOptions{
         'onUploadFailure' : '&'
     };
     static template = `
-        <div class="tdh-basket-uploader">
+        <div class="tdh-basket-uploader" ng-click="$ctrl.submitForm()">
             <span class="tdh-basket-uploader__text">Drag 3D files here or browse for a file</span>
         </div>
     `;

@@ -53,7 +53,7 @@ class ThreeDHubsBasketComponent {
                 </div>
             </div>
             <div class="tdh-basket__footer">
-                <three-d-hubs-basket-uploader on-upload-success="$ctrl.onBasketUploaderSuccess"></three-d-hubs-basket-uploader>
+                <three-d-hubs-basket-uploader on-upload-success="$ctrl.onBasketUploaderSuccess(data)"></three-d-hubs-basket-uploader>
             </div>
         </div>
     `;
