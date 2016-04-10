@@ -4,13 +4,17 @@ $tdh-basket-count-font-weight : lighter;
 $tdh-basket-count-button-background-color : #f65555;
 $tdh-basket-count-button-box-shadow : 0 0.15em #dd4d4d;
 $tdh-basket-count-button-color : white;
-$tdh-basket-count-button-padding : 15px 20px;
+$tdh-basket-count-button-padding : 10px 20px;
 $tdh-basket-count-button-border-radius : 5px;
 
 $tdh-basket-count-button-hover-background-color : #f76666;
 
 $tdh-basket-count-button-active-box-shadow : inset 0 10em 0 rgba(0,0,0,0.08),inset 0 0.15em 0.05em rgba(0,0,0,0.1);
 $tdh-basket-count-button-active-transform : translateY(0.15em);
+
+$tdh-basket-count-button-count-padding : 4px;
+$tdh-basket-count-button-count-border-radius : 50%;
+
 
 
 
@@ -50,5 +54,10 @@ $tdh-basket-count-button-active-transform : translateY(0.15em);
   }
 
     .tdh-basket-count-button__count {
-
+      display: inline-block;
+      min-width: 23px;
+      height:23px;
+      background-color: rgba(0,0,0,0.15);
+      border-radius: $tdh-basket-count-button-count-border-radius;
+      padding: $tdh-basket-count-button-count-padding;
     }

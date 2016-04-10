@@ -16,6 +16,9 @@ class ThreeDHubsBasketCountComponentBasketCount implements IThreeDHubsBasketCoun
     constructor($log : angular.ILogService){
         $log.debug('Hello from basketCount component controller');
     }
+    $onInit() {
+        console.log('Initing')
+    }
 }
 
 class ThreeDHubsBasketCountComponent {
@@ -23,7 +26,7 @@ class ThreeDHubsBasketCountComponent {
     static template = `
     <div class="tdh-basket-count">
         <a class="tdh-basket-count-button" ng-link="['Print']">
-            3D Print <span class="tdh-basket-count-button__count"></span>
+            3D Print <span class="tdh-basket-count-button__count">2</span>
         </a>
     </div>
     `;
