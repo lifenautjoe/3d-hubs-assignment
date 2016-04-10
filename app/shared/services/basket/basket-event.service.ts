@@ -23,7 +23,7 @@ export interface IBasketEventServiceWasClearedListener {
 }
 
 export interface IBasketEventServiceWasChangedListener {
-    (basketItems : IBasketItemCollection)
+    (basketItems:IBasketItemCollection)
 }
 
 
@@ -72,7 +72,7 @@ export interface IBasketEventService {
     /**
      * Broadcasts that the basket was changed
      */
-    broadcastWasChanged(basketItems : IBasketItemCollection) : void;
+    broadcastWasChanged(basketItems:IBasketItemCollection) : void;
     /**
      * Listens to the clearance of the basket
      * @param listener
@@ -85,39 +85,40 @@ class BasketEventService implements IBasketEventService {
         'eventDispatcherService'
     ];
     protected eventNames = {
-        'itemQuantityWasChanged' : 'itemQuantityWasChanged',
-        'itemWasAdded' : 'itemWasAdded',
-        'itemWasRemoved' : 'itemWasRemoved',
-        'wasCleared' : 'wasCleared',
-        'wasChanged' : 'wasChanged'
+        'itemQuantityWasChanged': 'itemQuantityWasChanged',
+        'itemWasAdded': 'itemWasAdded',
+        'itemWasRemoved': 'itemWasRemoved',
+        'wasCleared': 'wasCleared',
+        'wasChanged': 'wasChanged'
     };
-    protected eventDispatcher : IEventDispatcher;
+    protected eventDispatcher:IEventDispatcher;
+
     constructor(eventDispatcherService:IEventDispatcherService) {
         this.eventDispatcher = eventDispatcherService.make();
     }
 
     broadcastItemQuantityWasChanged(basketItem:IBasketItem, from:number, to:number):void {
-        this.eventDispatcher.broadcast(this.eventNames.itemQuantityWasChanged,basketItem,from,to);
+        this.eventDispatcher.broadcast(this.eventNames.itemQuantityWasChanged, basketItem, from, to);
     }
 
     listenItemQuantityWasChanged(listener:IBasketEventServiceQuantityWasChangedListener):IEventCollectionListenerRemover {
-        return this.eventDispatcher.listen(this.eventNames.itemQuantityWasChanged,listener);
+        return this.eventDispatcher.listen(this.eventNames.itemQuantityWasChanged, listener);
     }
 
     broadcastItemWasAdded(basketItem:IBasketItem):void {
-        this.eventDispatcher.broadcast(this.eventNames.itemWasAdded,basketItem);
+        this.eventDispatcher.broadcast(this.eventNames.itemWasAdded, basketItem);
     }
 
     listenItemWasAdded(listener:IBasketEventServiceItemWasAddedListener):IEventCollectionListenerRemover {
-        return this.eventDispatcher.listen(this.eventNames.itemWasAdded,listener);
+        return this.eventDispatcher.listen(this.eventNames.itemWasAdded, listener);
     }
 
     broadcastItemWasRemoved(basketItem:IBasketItem):void {
-        this.eventDispatcher.broadcast(this.eventNames.itemWasRemoved,basketItem);
+        this.eventDispatcher.broadcast(this.eventNames.itemWasRemoved, basketItem);
     }
 
     listenItemWasRemoved(listener:IBasketEventServiceItemWasRemovedListener):IEventCollectionListenerRemover {
-        return this.eventDispatcher.listen(this.eventNames.itemWasRemoved,listener);
+        return this.eventDispatcher.listen(this.eventNames.itemWasRemoved, listener);
     }
 
     broadcastWasCleared():void {
