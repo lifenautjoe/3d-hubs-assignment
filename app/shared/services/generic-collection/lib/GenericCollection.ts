@@ -7,7 +7,7 @@ export interface IGenericCollection<T> {
      * Removes the given value from the collection
      * @param value
      */
-    remove(value:T) : void;
+    remove(value:T) : boolean;
     /**
      * Adds the given value to the collection
      * @param value
@@ -44,11 +44,16 @@ export class GenericCollection<T> implements IGenericCollection<T> {
         this.values = items ? items : [];
     }
 
-    remove(value:T) {
-        let items = this.get();
-        this.set(items.filter(function (storedValue) {
-            return value !== storedValue;
-        }));
+    remove(value:T) : boolean {
+        if(this.has(value)){
+            let items = this.get();
+            // TODO : Create GenericCollectionFilterDelegate and optimize
+            this.set(items.filter(function (storedValue) {
+                return value !== storedValue;
+            }));
+            return true;
+        }
+        return false;
     }
 
     add(value:T) {
