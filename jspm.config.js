@@ -52,6 +52,7 @@ SystemJS.config({
     "angular-typescript": "npm:angular-typescript@0.0.8",
     "assert": "github:jspm/nodelibs-assert@0.2.0-alpha",
     "bluebird": "npm:bluebird@3.3.4",
+    "bootstrap-grid-only": "github:zirafa/bootstrap-grid-only@master",
     "buffer": "github:jspm/nodelibs-buffer@0.2.0-alpha",
     "child_process": "github:jspm/nodelibs-child_process@0.2.0-alpha",
     "clean-css": "npm:clean-css@3.4.12",
@@ -73,8 +74,7 @@ SystemJS.config({
     "string_decoder": "github:jspm/nodelibs-string_decoder@0.2.0-alpha",
     "url": "github:jspm/nodelibs-url@0.2.0-alpha",
     "util": "github:jspm/nodelibs-util@0.2.0-alpha",
-    "vm": "github:jspm/nodelibs-vm@0.2.0-alpha",
-    "yui3-contextual-reset": "npm:yui3-contextual-reset@1.0.5"
+    "vm": "github:jspm/nodelibs-vm@0.2.0-alpha"
   },
   packages: {
     "github:angular/bower-angular-mocks@1.5.3": {

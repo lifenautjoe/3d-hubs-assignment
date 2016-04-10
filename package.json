@@ -21,9 +21,9 @@
       "angular-mocks": "github:angular/bower-angular-mocks@^1.5.3",
       "angular-typescript": "npm:angular-typescript@^0.0.8",
       "bluebird": "npm:bluebird@^3.3.4",
+      "bootstrap-grid-only": "github:zirafa/bootstrap-grid-only@master",
       "clean-css": "npm:clean-css@^3.4.12",
-      "ngcomponentrouter": "github:thefabulousdev/ngComponentRouter@master",
-      "yui3-contextual-reset": "npm:yui3-contextual-reset@^1.0.5"
+      "ngcomponentrouter": "github:thefabulousdev/ngComponentRouter@master"
     },
     "devDependencies": {
       "css": "github:systemjs/plugin-css@^0.1.20",
