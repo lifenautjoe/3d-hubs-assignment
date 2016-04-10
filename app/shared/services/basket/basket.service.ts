@@ -24,7 +24,6 @@ export interface IBasketService {
     removeItem(basketItem:IBasketItem) : void;
     updateItemQuantity(basketItem:IBasketItem, to:number) : void;
     clearItems() : void;
-    countItems() : number;
     getItems() : IBasketItemCollection;
 }
 
@@ -67,9 +66,6 @@ class BasketService implements IBasketService {
         this.broadcastWasChanged();
     }
 
-    countItems() : number {
-        return this.itemsCollection.count();
-    }
 
     getItems() : IBasketItemCollection {
         return this.itemsCollection.get();
