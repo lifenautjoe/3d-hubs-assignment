@@ -3,11 +3,11 @@
  */
 
 import angular = require('angular');
-import './basket-uploader.scss';
+import './basket.scss';
 import {IBasketService,IBasketItemCollection} from "../../../../shared/services/basket/basket.service";
 import {IBasketEventService} from "../../../../shared/services/basket/basket-event.service";
 
-export interface IThreeDHubsBasketUploaderComponentController {
+export interface IThreeDHubsBasketComponentController {
     /**
      * The basket was changed event handler
      * @param basketItems
@@ -15,7 +15,7 @@ export interface IThreeDHubsBasketUploaderComponentController {
     onBasketWasChanged(basketItems : IBasketItemCollection);
 }
 
-class ThreeDHubsBasketUploaderComponentController implements IThreeDHubsBasketUploaderComponentController {
+class ThreeDHubsBasketComponentController implements IThreeDHubsBasketComponentController {
     static $inject = [
         'basketService',
         'basketEventService'
@@ -30,23 +30,23 @@ class ThreeDHubsBasketUploaderComponentController implements IThreeDHubsBasketUp
     }
 }
 
-class ThreeDHubsBasketUploaderComponent{
-    static controller = ThreeDHubsBasketUploaderComponentController;
+class ThreeDHubsBasketComponent{
+    static controller = ThreeDHubsBasketComponentController;
     static template = `
-        <div class="tdh-basket-uploader">
-            <div class="tdh-basket-uploader__header">
+        <div class="tdh-basket">
+            <div class="tdh-basket__header">
                 <span ng-bind="($ctrl.basketItems.length ? $ctrl.basketItems.length : 'No') + ' files uploaded'"></span>
             </div>
-            <div class="tdh-basket-uploader__content">
+            <div class="tdh-basket__content">
                 <div ng-repeat="basketItem in $ctrl.basketItems">
                     <span ng-bind="basketItem.name"></span>
                 </div>
             </div>
-            <div class="tdh-basket-uploader__footer">
+            <div class="tdh-basket__footer">
                 Footer
             </div>
         </div>
     `;
 }
 
-angular.module('3dHubsAssignment').component('threeDHubsBasketUploader',ThreeDHubsBasketUploaderComponent);
+angular.module('3dHubsAssignment').component('threeDHubsBasket',ThreeDHubsBasketComponent);

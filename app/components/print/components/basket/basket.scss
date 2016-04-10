@@ -1,0 +1,22 @@
+$tdh-basket-background-color : white;
+$tdh-basket-border-radius : 5px;
+$tdh-basket-box-shadow : 0 1px 0.35rem rgba(0,0,0,0.15);
+$tdh-basket-font-family : arial, helvetica, verdana, sans-serif;
+
+$tdh-basket-header-padding : 20px;
+$tdh-basket-header-font-size : 1.25em;
+$tdh-basket-header-border-bottom : 1px solid #e6e6e6;
+
+
+.tdh-basket{
+  background-color: $tdh-basket-background-color;
+  box-shadow: $tdh-basket-box-shadow;
+  border-radius: $tdh-basket-border-radius;
+  font-family: $tdh-basket-font-family;
+}
+
+  .tdh-basket__header{
+    padding:$tdh-basket-header-padding;
+    font-size: $tdh-basket-header-font-size;
+    border-bottom:$tdh-basket-header-border-bottom;
+  }

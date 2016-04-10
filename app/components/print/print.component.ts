@@ -24,7 +24,7 @@ class ThreeDHubsPrintComponent{
             <span class="tdh-print__step-text">
                 1. Add files for instant prices
             </span>
-            <three-d-hubs-basket-uploader></three-d-hubs-basket-uploader>
+            <three-d-hubs-basket></three-d-hubs-basket>
         </div>
     `;
 }

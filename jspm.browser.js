@@ -44,7 +44,7 @@ SystemJS.config({
       "3d-hubs-assignment/shared/services/basket/basket.service.ts",
       "3d-hubs-assignment/shared/components/header/components/index.ts",
       "3d-hubs-assignment/shared/components/header/header.component.ts",
-      "3d-hubs-assignment/components/print/components/basket-uploader/index.ts",
+      "3d-hubs-assignment/components/print/components/basket/index.ts",
       "3d-hubs-assignment/components/print/print.scss",
       "3d-hubs-assignment/shared/services/generic-collection/lib/GenericCollection.ts",
       "3d-hubs-assignment/shared/services/event-dispatcher/lib/EventDispatcher.ts",
@@ -55,8 +55,8 @@ SystemJS.config({
       "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.scss",
       "npm:bluebird@3.3.4.json",
       "npm:bluebird@3.3.4/js/browser/bluebird.js",
-      "3d-hubs-assignment/components/print/components/basket-uploader/basket-uploader.component.ts",
-      "3d-hubs-assignment/components/print/components/basket-uploader/basket-uploader.scss"
+      "3d-hubs-assignment/components/print/components/basket/basket.component.ts",
+      "3d-hubs-assignment/components/print/components/basket/basket.scss"
     ]
   }
 });

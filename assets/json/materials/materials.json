@@ -1,0 +1,26 @@
+[
+  {
+    "id" : 1,
+    "name" : "General purpose plastics",
+    "description" : "Affordable, durable and widely available plastics like ABS and PLA.",
+    "photo" : "https://3dhubs.s3-eu-west-1.amazonaws.com/s3fs-public/styles/medium/hubs3dpublic/General%20Purpose%20Plastics.jpg?itok=PsC9_5jD"
+  },
+  {
+    "id" : 2,
+    "name" : "High detail resin",
+    "description" : "Intricate designs and sculptures with a smooth surface finish.",
+    "photo" : "https://3dhubs.s3-eu-west-1.amazonaws.com/s3fs-public/styles/medium/hubs3dpublic/High%20Detail%20Resin_1_0.jpg?itok=pgM98RN3"
+  },
+  {
+    "id" : 3,
+    "name" : "Strong and flexible nylon",
+    "description" : "Functional prototypes and end-use parts from laser sintered nylon.",
+    "photo" : "https://3dhubs.s3-eu-west-1.amazonaws.com/s3fs-public/styles/medium/hubs3dpublic/Strong%20and%20Flexible%20Nylon.jpg?itok=pAy6tY8e"
+  },
+  {
+    "id" : 4,
+    "name" : "Rubber like plastic",
+    "description" : "Simulate rubber with various levels of elasticity.",
+    "photo" : "https://3dhubs.s3-eu-west-1.amazonaws.com/s3fs-public/styles/medium/hubs3dpublic/Rubber-like%20Plastics_1.jpg?itok=nVCkEbZh"
+  }
+]
