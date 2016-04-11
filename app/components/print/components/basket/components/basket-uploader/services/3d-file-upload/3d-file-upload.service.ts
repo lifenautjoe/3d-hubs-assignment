@@ -31,8 +31,8 @@ class ThreeDFileUploadService implements IThreeDFileUploadService{
     constructor(protected Promise : PromiseConstructor){
 
     }
-    upload(threeDFile){
-        return new this.Promise( (resolve) => {
+    upload(threeDFile) : Promise<IThreeDFileUploadServiceSuccessData> {
+        return new this.Promise<IThreeDFileUploadServiceSuccessData>( (resolve) => {
             resolve({
                 render : 'someimage.jpg',
                 filename : 'yourfile.stl',

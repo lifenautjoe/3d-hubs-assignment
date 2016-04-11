@@ -9,10 +9,12 @@
 import './basket-uploader.scss';
 import angular = require('angular');
 import {IEventDispatcherService} from "../../../../../../shared/services/event-dispatcher/event-dispatcher.service";
-import {IThreeDFileUploadService} from "./services/3d-file-upload.service";
-export {IThreeDFileUploadServiceSuccessData} from './services/3d-file-upload.service';
-
+import {IThreeDFileUploadService} from "./services/3d-file-upload/3d-file-upload.service";
+export {IThreeDFileUploadServiceSuccessData} from "./services/3d-file-upload/3d-file-upload.service";
 export interface IThreeDHubsBasketUploaderComponentController {
+    /**
+     * Submits an imaginary form
+     */
     submitForm();
 }
 
@@ -22,23 +24,27 @@ class ThreeDHubsBasketUploaderComponentController implements IThreeDHubsBasketUp
     ];
     protected onUploadSuccess;
     protected onUploadFailure;
-    constructor(protected threeDFileUploadService : IThreeDFileUploadService){
+
+    constructor(protected threeDFileUploadService:IThreeDFileUploadService) {
 
     }
-    submitForm(){
+
+    submitForm() {
         // ... do whatever must be done in order to get the 3d file
         let threeDFile = {};
         this.threeDFileUploadService.upload(threeDFile)
-            .then((data)=> this.onUploadSuccess ? this.onUploadSuccess({data : data}) : null)
-            .catch((err) => this.onUploadFailure ? this.onUploadFailure({err : err}) : null);
+            .then((data)=> this.onUploadSuccess ? this.onUploadSuccess({data: data}) : null)
+            .catch((err) => this.onUploadFailure ? this.onUploadFailure({err: err}) : null);
     }
 }
 
-class ThreeDHubsBasketUploaderComponent implements angular.IComponentOptions{
+
+
+class ThreeDHubsBasketUploaderComponent {
     static controller = ThreeDHubsBasketUploaderComponentController;
-    static bindings = {
-        'onUploadSuccess' : '&',
-        'onUploadFailure' : '&'
+    static bindings : {[binding : string] : string} = {
+        onUploadSuccess: '&',
+        onUploadFailure: '&'
     };
     static template = `
         <div class="tdh-basket-uploader" ng-click="$ctrl.submitForm()">
@@ -47,4 +53,5 @@ class ThreeDHubsBasketUploaderComponent implements angular.IComponentOptions{
     `;
 }
 
-angular.module('3dHubsAssignment').component('threeDHubsBasketUploader',ThreeDHubsBasketUploaderComponent);
+angular.module('3dHubsAssignment').component('threeDHubsBasketUploader', ThreeDHubsBasketUploaderComponent);
+
