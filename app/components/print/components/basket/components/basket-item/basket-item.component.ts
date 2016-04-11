@@ -25,10 +25,19 @@ class ThreeDHubsBasketItemComponent {
     static template = `
         <div class="tdh-basket-item">
             <div class="tdh-basket-item__quantity">
-                Wololo
+                Quantity
             </div>
             <div class="tdh-basket-item__details">
-                <span ng-bind="$ctrl.basketItem.name"></span>
+                <div class="tdh-basket-item-details">
+                    <img class="tdh-basket-item-details__image" ng-src="{{$ctrl.basketItem.image}}" >
+                    <div class="tdh-basket-item-details-texts">
+                        <span class="tdh-basket-item-detail-texts__name" ng-bind="$ctrl.basketItem.name">
+                        </span>
+                        <span class="tdh-basket-item-detail-texts__dimensions"
+                            ng-bind="$ctrl.basketItem.x + ' X ' + $ctrl.basketItem.y + ' X ' + $ctrl.basketItem.z + ' cm'">
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     `;
