@@ -3,4 +3,4 @@
  */
 
 import './home/index.ts';
-import './cart/index.ts';
+import './print/index.ts';

@@ -3,4 +3,4 @@
  */
 
 import './components/index.ts';
-import './header.component.ts';
+import './print.component.ts';

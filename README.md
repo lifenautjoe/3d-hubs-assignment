@@ -1,14 +1,12 @@
 # 3d-hubs-assignment
 
-**TODO**
+Skills assessment assignment for 3d hubs
 
-#### Requirements
+## Requirements
 
-**TODO**
+#### [Install node](https://nodejs.org/en/download/)
 
 ## Development
-
-### Requirements
 
 #### Clone the repository
 
@@ -16,8 +14,7 @@
 git clone https://github.com/thefabulousdev/3d-hubs-assignment.git
 ```
 
-
-#### Install all dependencies
+#### Install dependencies
 ``` sh
 npm install
 ```
@@ -28,5 +25,10 @@ npm install
 * `npm run build` to build an optimized version of the library in `/dist`
 * `npm run serve:dev` to launch a browser sync server on the source files
 * `npm run serve:dist` to launch a server with the optimized library files
+
+### Remarks
+
+ - As time ran shorter, and due to the complexity of a recursive composite architecture, tests were pulled aside
+ in favor of a runnable demo
 
 #### Author: [Joel Hernández](https://github.com/thefabulousdev)

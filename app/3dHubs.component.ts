@@ -28,14 +28,18 @@ class ThreeDHubsComponent{
             useAsDefault : true
         },
         {
-            path : '/cart',
-            name : 'Cart',
-            component : 'threeDHubsCart'
+            path : '/print',
+            name : 'Print',
+            component : 'threeDHubsPrint'
         }
     ];
     static template = `
-        <three-d-hubs-header></three-d-hubs-header>
-        <ng-outlet></ng-outlet>
+        <div class="tdh">
+            <three-d-hubs-header></three-d-hubs-header>
+            <div class="tdh-page">
+                <ng-outlet></ng-outlet>
+            </div>
+        </div>
     `;
 }
 
