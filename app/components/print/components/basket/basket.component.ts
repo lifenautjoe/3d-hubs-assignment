@@ -18,7 +18,12 @@ export interface IThreeDHubsBasketComponentController {
      * The basket-uploader component upload success handler
      * @param basketItem
      */
-    onBasketUploaderSuccess(basketItem:IThreeDFileUploadServiceSuccessData);
+    onBasketUploaderSuccess(data:IThreeDFileUploadServiceSuccessData);
+    /**
+     * The basket-item remove was clicked event handler
+     * @param basketItem
+     */
+    onRemoveWasClicked(basketItem : IBasketItem);
 }
 
 class ThreeDHubsBasketComponentController implements IThreeDHubsBasketComponentController {
@@ -29,7 +34,7 @@ class ThreeDHubsBasketComponentController implements IThreeDHubsBasketComponentC
     protected basketItems:IBasketItemCollection;
     constructor(protected basketService:IBasketService, basketEventService:IBasketEventService) {
         this.basketItems = basketService.getItems();
-        basketEventService.listenWasChanged(this.onBasketWasChanged);
+        basketEventService.listenWasChanged(this.onBasketWasChanged.bind(this));
     }
 
     onBasketWasChanged(basketItems:IBasketItemCollection) {
@@ -39,6 +44,10 @@ class ThreeDHubsBasketComponentController implements IThreeDHubsBasketComponentC
     onBasketUploaderSuccess(data : IThreeDFileUploadServiceSuccessData) {
         let basketItem = this.adaptUploaderSuccessDataToBasketItem(data);
         this.basketService.addItem(basketItem);
+    }
+
+    onRemoveWasClicked(basketItem : IBasketItem){
+        this.basketService.removeItem(basketItem);
     }
 
     protected adaptUploaderSuccessDataToBasketItem (data : IThreeDFileUploadServiceSuccessData) : IBasketItem{
@@ -61,7 +70,7 @@ class ThreeDHubsBasketComponent {
                 <span ng-bind="($ctrl.basketItems.length ? $ctrl.basketItems.length : 'No') + ' files uploaded'"></span>
             </div>
             <div class="tdh-basket__content">
-                <three-d-hubs-basket-item ng-repeat="basketItem in $ctrl.basketItems" basket-item="basketItem"></three-d-hubs-basket-item>
+                <three-d-hubs-basket-item on-remove-was-clicked="$ctrl.onRemoveWasClicked(basketItem)" ng-repeat="basketItem in $ctrl.basketItems" basket-item="basketItem"></three-d-hubs-basket-item>
             </div>
             <div class="tdh-basket__footer">
                 <three-d-hubs-basket-uploader on-upload-success="$ctrl.onBasketUploaderSuccess(data)"></three-d-hubs-basket-uploader>

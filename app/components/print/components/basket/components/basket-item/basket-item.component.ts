@@ -21,9 +21,11 @@ class ThreeDHubsBasketItemComponent {
     static controller = ThreeDHubsBasketItemComponentController;
     static bindings:{[binding : string] : string} = {
         basketItem: '<',
+        onRemoveWasClicked : '&'
     };
     static template = `
         <div class="tdh-basket-item">
+            <span class="tdh-basket-item__close" ng-click="$ctrl.onRemoveWasClicked ? $ctrl.onRemoveWasClicked({basketItem : $ctrl.basketItem}) : null"></span>
             <div class="tdh-basket-item__quantity">
                 <div class="tdh-basket-item-quantity">
                     Quantity&nbsp;:&nbsp;<input type="text" class="tdh-basket-item-quantity__input"" ng-model="$ctrl.basketItem.quantity">
