@@ -134,7 +134,7 @@ class BasketEventService implements IBasketEventService {
     }
 
     listenWasChanged(listener:IBasketEventServiceWasChangedListener):IEventCollectionListenerRemover {
-        return this.eventDispatcher.listen(this.eventNames.wasChanged);
+        return this.eventDispatcher.listen(this.eventNames.wasChanged,listener);
     }
 }
 
