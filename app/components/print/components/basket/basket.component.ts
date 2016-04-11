@@ -6,6 +6,7 @@ import angular = require('angular');
 import './basket.scss';
 import {IBasketService,IBasketItemCollection,IBasketItem} from "../../../../shared/services/basket/basket.service";
 import {IBasketEventService} from "../../../../shared/services/basket/basket-event.service";
+import {IThreeDFileUploadServiceSuccessData} from "./components/basket-uploader/basket-uploader.component";
 
 export interface IThreeDHubsBasketComponentController {
     /**
@@ -17,7 +18,7 @@ export interface IThreeDHubsBasketComponentController {
      * The basket-uploader component upload success handler
      * @param basketItem
      */
-    onBasketUploaderSuccess(basketItem:IBasketItem);
+    onBasketUploaderSuccess(basketItem:IThreeDFileUploadServiceSuccessData);
 }
 
 class ThreeDHubsBasketComponentController implements IThreeDHubsBasketComponentController {
@@ -35,8 +36,20 @@ class ThreeDHubsBasketComponentController implements IThreeDHubsBasketComponentC
         this.basketItems = basketItems;
     }
 
-    onBasketUploaderSuccess(basketItem:IBasketItem) {
+    onBasketUploaderSuccess(data : IThreeDFileUploadServiceSuccessData) {
+        let basketItem = this.adaptUploaderSuccessDataToBasketItem(data);
         this.basketService.addItem(basketItem);
+    }
+
+    protected adaptUploaderSuccessDataToBasketItem (data : IThreeDFileUploadServiceSuccessData) : IBasketItem{
+        return {
+            image : data.render,
+            name : data.filename,
+            quantity : 0,
+            x : data.dimensions.x,
+            y : data.dimensions.y,
+            z : data.dimensions.z
+        }
     }
 }
 
@@ -48,7 +61,10 @@ class ThreeDHubsBasketComponent {
                 <span ng-bind="($ctrl.basketItems.length ? $ctrl.basketItems.length : 'No') + ' files uploaded'"></span>
             </div>
             <div class="tdh-basket__content">
-                <div ng-repeat="basketItem in $ctrl.basketItems">
+                <div class="tdh-basket-item" ng-repeat="basketItem in $ctrl.basketItems">
+                    <div>
+
+                    </div>
                     <span ng-bind="basketItem.name"></span>
                 </div>
             </div>

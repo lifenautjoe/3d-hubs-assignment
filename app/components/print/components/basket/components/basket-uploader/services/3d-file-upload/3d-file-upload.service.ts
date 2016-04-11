@@ -35,7 +35,7 @@ class ThreeDFileUploadService implements IThreeDFileUploadService{
         return new this.Promise<IThreeDFileUploadServiceSuccessData>( (resolve) => {
             resolve({
                 render : 'someimage.jpg',
-                filename : 'yourfile.stl',
+                filename : `${Math.round(Math.random() * (100))}.jpg`,
                 dimensions : {
                     x : 10,
                     y : 20,
