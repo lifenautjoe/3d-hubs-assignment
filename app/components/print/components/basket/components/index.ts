@@ -3,3 +3,4 @@
  */
 
 import './basket-uploader/index.ts';
+import './basket-item/index.ts';

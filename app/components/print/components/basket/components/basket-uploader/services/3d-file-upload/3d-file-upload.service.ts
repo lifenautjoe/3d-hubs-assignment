@@ -34,12 +34,13 @@ class ThreeDFileUploadService implements IThreeDFileUploadService{
     upload(threeDFile) : Promise<IThreeDFileUploadServiceSuccessData> {
         return new this.Promise<IThreeDFileUploadServiceSuccessData>( (resolve) => {
             resolve({
-                render : 'someimage.jpg',
+                // Mock purposes
+                render : 'https://3dhubs.s3-eu-west-1.amazonaws.com/s3fs-public/styles/order_photo/hubs3dpublic/renders/entity_464485_render.png?itok=XQq8mc0q',
                 filename : `${Math.round(Math.random() * (100))}.jpg`,
                 dimensions : {
-                    x : 10,
-                    y : 20,
-                    z : 30
+                    x : `${Math.round(Math.random() * (10))}`,
+                    y : `${Math.round(Math.random() * (10))}`,
+                    z : `${Math.round(Math.random() * (10))}`
                 }
             });
         });

@@ -61,12 +61,7 @@ class ThreeDHubsBasketComponent {
                 <span ng-bind="($ctrl.basketItems.length ? $ctrl.basketItems.length : 'No') + ' files uploaded'"></span>
             </div>
             <div class="tdh-basket__content">
-                <div class="tdh-basket-item" ng-repeat="basketItem in $ctrl.basketItems">
-                    <div>
-
-                    </div>
-                    <span ng-bind="basketItem.name"></span>
-                </div>
+                <three-d-hubs-basket-item ng-repeat="basketItem in $ctrl.basketItems" basket-item="basketItem"></three-d-hubs-basket-item>
             </div>
             <div class="tdh-basket__footer">
                 <three-d-hubs-basket-uploader on-upload-success="$ctrl.onBasketUploaderSuccess(data)"></three-d-hubs-basket-uploader>

@@ -7,10 +7,6 @@ $tdh-basket-header-padding : 20px;
 $tdh-basket-header-font-size : 1.25em;
 $tdh-basket-header-border-bottom : 1px solid #e6e6e6;
 
-$tdh-basket-item-padding : 20px;
-$tdh-basket-item-border-bottom : $tdh-basket-header-border-bottom;
-
-
 .tdh-basket{
   background-color: $tdh-basket-background-color;
   box-shadow: $tdh-basket-box-shadow;
@@ -27,8 +23,3 @@ $tdh-basket-item-border-bottom : $tdh-basket-header-border-bottom;
   .tdh-basket__content{
 
   }
-
-    .tdh-basket-item{
-      padding:$tdh-basket-item-padding;
-      border-bottom: $tdh-basket-item-border-bottom;
-    }
