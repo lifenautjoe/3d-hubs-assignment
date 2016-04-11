@@ -129,8 +129,8 @@ class BasketEventService implements IBasketEventService {
         return this.eventDispatcher.listen(this.eventNames.wasCleared);
     }
 
-    broadcastWasChanged():void {
-        this.eventDispatcher.broadcast(this.eventNames.wasChanged);
+    broadcastWasChanged(basketItems:IBasketItemCollection) : void {
+        this.eventDispatcher.broadcast(this.eventNames.wasChanged,basketItems);
     }
 
     listenWasChanged(listener:IBasketEventServiceWasChangedListener):IEventCollectionListenerRemover {

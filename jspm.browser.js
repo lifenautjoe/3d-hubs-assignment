@@ -42,7 +42,6 @@ SystemJS.config({
       "3d-hubs-assignment/shared/services/generic-collection/generic-collection.service.ts",
       "3d-hubs-assignment/shared/services/event-dispatcher/event-dispatcher.service.ts",
       "3d-hubs-assignment/shared/services/basket/basket-event.service.ts",
-      "3d-hubs-assignment/shared/services/basket/basket.service.ts",
       "3d-hubs-assignment/shared/components/header/components/index.ts",
       "3d-hubs-assignment/shared/components/header/header.component.ts",
       "3d-hubs-assignment/components/print/components/basket/index.ts",
@@ -52,10 +51,12 @@ SystemJS.config({
       "3d-hubs-assignment/shared/components/header/components/basket-count/index.ts",
       "3d-hubs-assignment/shared/components/header/header.scss",
       "3d-hubs-assignment/components/print/components/basket/components/index.ts",
+      "3d-hubs-assignment/components/print/components/basket/basket.component.ts",
       "3d-hubs-assignment/shared/services/event-dispatcher/lib/EventCollection.ts",
       "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.component.ts",
       "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/index.ts",
       "3d-hubs-assignment/components/print/components/basket/components/basket-item/index.ts",
+      "3d-hubs-assignment/components/print/components/basket/basket.scss",
       "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.scss",
       "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/services/index.ts",
       "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/basket-uploader.component.ts",
@@ -66,8 +67,7 @@ SystemJS.config({
       "3d-hubs-assignment/components/print/components/basket/components/basket-item/basket-item.scss",
       "npm:bluebird@3.3.4.json",
       "npm:bluebird@3.3.4/js/browser/bluebird.js",
-      "3d-hubs-assignment/components/print/components/basket/basket.component.ts",
-      "3d-hubs-assignment/components/print/components/basket/basket.scss"
+      "3d-hubs-assignment/shared/services/basket/basket.service.ts"
     ]
   }
 });
