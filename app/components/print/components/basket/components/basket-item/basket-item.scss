@@ -19,10 +19,22 @@ $tdh-basket-item-details-texts-name-font-size : 1.2em;
 $tdh-basket-item-details-texts-dimensions-padding-top : 15px;
 
 .tdh-basket-item{
+  position: relative;
   font-family:$tdh-basket-item-font-family;
   padding:$tdh-basket-item-padding;
   border-bottom: $tdh-basket-item-border-bottom;
 }
+
+  .tdh-basket-item__close {
+    &:before{
+      font-size: 0.8em;
+      cursor: pointer;
+      content :'X';
+      position: absolute;
+      top: 10px;
+      right:20px;
+    }
+  }
 
   .tdh-basket-item__quantity{
     float : right;
