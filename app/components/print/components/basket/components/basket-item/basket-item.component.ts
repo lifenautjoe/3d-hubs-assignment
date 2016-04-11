@@ -25,7 +25,9 @@ class ThreeDHubsBasketItemComponent {
     static template = `
         <div class="tdh-basket-item">
             <div class="tdh-basket-item__quantity">
-                Quantity
+                <div class="tdh-basket-item-quantity">
+                    Quantity&nbsp;:&nbsp;<input type="text" class="tdh-basket-item-quantity__input"" ng-model="$ctrl.basketItem.quantity">
+                </div>
             </div>
             <div class="tdh-basket-item__details">
                 <div class="tdh-basket-item-details">

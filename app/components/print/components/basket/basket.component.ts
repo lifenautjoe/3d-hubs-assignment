@@ -45,7 +45,7 @@ class ThreeDHubsBasketComponentController implements IThreeDHubsBasketComponentC
         return {
             image : data.render,
             name : data.filename,
-            quantity : 0,
+            quantity : 1,
             x : data.dimensions.x,
             y : data.dimensions.y,
             z : data.dimensions.z
