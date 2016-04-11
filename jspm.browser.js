@@ -35,7 +35,6 @@ SystemJS.config({
       "3d-hubs-assignment/shared/services/event-dispatcher/index.ts",
       "3d-hubs-assignment/shared/services/basket/index.ts",
       "3d-hubs-assignment/shared/components/header/index.ts",
-      "3d-hubs-assignment/components/home/home.component.ts",
       "3d-hubs-assignment/components/print/components/index.ts",
       "3d-hubs-assignment/components/print/print.component.ts",
       "github:mobilexag/plugin-sass@0.4.0.json",
@@ -54,9 +53,11 @@ SystemJS.config({
       "3d-hubs-assignment/components/print/components/basket/components/index.ts",
       "3d-hubs-assignment/components/print/components/basket/basket.component.ts",
       "3d-hubs-assignment/shared/services/event-dispatcher/lib/EventCollection.ts",
+      "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.component.ts",
       "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/index.ts",
       "3d-hubs-assignment/components/print/components/basket/components/basket-item/index.ts",
       "3d-hubs-assignment/components/print/components/basket/basket.scss",
+      "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.scss",
       "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/services/index.ts",
       "3d-hubs-assignment/components/print/components/basket/components/basket-uploader/basket-uploader.component.ts",
       "3d-hubs-assignment/components/print/components/basket/components/basket-item/basket-item.component.ts",
@@ -66,8 +67,8 @@ SystemJS.config({
       "3d-hubs-assignment/components/print/components/basket/components/basket-item/basket-item.scss",
       "npm:bluebird@3.3.4.json",
       "npm:bluebird@3.3.4/js/browser/bluebird.js",
-      "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.component.ts",
-      "3d-hubs-assignment/shared/components/header/components/basket-count/basket-count.scss"
+      "3d-hubs-assignment/components/home/home.component.ts",
+      "3d-hubs-assignment/components/home/home.scss"
     ]
   }
 });

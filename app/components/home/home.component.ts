@@ -3,6 +3,7 @@
  */
 
 import angular = require('angular');
+import './home.scss';
 
 export interface IThreeDHubsHomeComponentController {
     
@@ -10,17 +11,16 @@ export interface IThreeDHubsHomeComponentController {
 
 class ThreeDHubsHomeComponentController implements IThreeDHubsHomeComponentController {
     static $inject = [
-        '$log'
     ];
-    constructor($log : angular.ILogService){
+    constructor(){
     }
 }
 
 class ThreeDHubsHomeComponent {
     static controller = ThreeDHubsHomeComponentController;
     static template = `
-        <div class="container">
-            Welcome threeDHubsHomeComponent
+        <div class="container tdh-home">
+            Welcome :)
         </div>
     `;
 }
