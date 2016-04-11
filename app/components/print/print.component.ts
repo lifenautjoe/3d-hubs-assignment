@@ -3,6 +3,7 @@
  */
 
 import angular = require('angular');
+import './print.scss';
 
 export interface IThreeDHubsPrintComponentController {
     
@@ -19,7 +20,12 @@ class ThreeDHubsPrintComponentController implements IThreeDHubsPrintComponentCon
 class ThreeDHubsPrintComponent{
     static controller = ThreeDHubsPrintComponentController;
     static template = `
-        <div>Welcome threeDHubsPrintComponent</div>
+        <div class="container tdh-print">
+            <span class="tdh-print__step-text">
+                1. Add files for instant prices
+            </span>
+            <three-d-hubs-basket></three-d-hubs-basket>
+        </div>
     `;
 }
 

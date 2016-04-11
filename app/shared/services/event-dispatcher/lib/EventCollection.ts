@@ -2,6 +2,9 @@
  * Created by herna502 on 10/04/16.
  */
 
+// TODO : Make events storage a separated class, currently implemented here (add,remove,set,get,has)
+
+
 export interface IEventCollectionListener {
     (...args:any[]);
 }
@@ -78,7 +81,6 @@ export interface IEventCollection<EventsListenersStorage,Listener extends IEvent
 
 }
 
-// TODO : Make events storage a separated class
 
 interface EventCollectionListener extends IEventCollectionListener {
 }

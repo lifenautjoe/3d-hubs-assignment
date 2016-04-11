@@ -47,6 +47,15 @@ table {
   border-spacing: 0;
 }
 
-.tdh {
-  margin : 70px auto 0 !important;
+html,body{
+  height:100%;
 }
+
+.tdh {
+  height:100%;
+  background-color: #f4f6f6;
+}
+
+  .tdh-page {
+    padding-top : 70px;
+  }

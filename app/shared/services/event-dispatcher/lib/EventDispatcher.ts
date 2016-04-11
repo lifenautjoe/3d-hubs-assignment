@@ -9,7 +9,7 @@ import {
     IEventCollectionListener,
     IEventCollectionListenerRemover } from './EventCollection';
 
-export { EventCollectionEventsListenersStorage } from './EventCollection';
+export { EventCollectionEventsListenersStorage,IEventCollectionListenerRemover } from './EventCollection';
 
 export interface IEventDispatcher {
     /**
