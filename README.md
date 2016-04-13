@@ -1,6 +1,16 @@
 # 3d-hubs-assignment
 
-Skills assessment assignment for 3d hubs
+Skills assessment assignment for [3dHubs](https://www.3dhubs.com/) done within 8 hours
+
+## Stack
+
+* [JSPM](http://jspm.io/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Angular@1.5](https://angularjs.org/)
+* [Jasmine](jasmine.github.io)
+* [Karma](https://karma-runner.github.io)
+* [BrowserSync](browsersync.io)
+* [TypeDoc](http://typedoc.io/)
 
 ## Requirements
 
